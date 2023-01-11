@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function check(num) {
+            return num % 2 == 0;
+        }
+        function run(data) {
+            var test = data.every(check);
+            if (test == true) {
+                console.log("Yes");
+            } else {
+                console.log("No");
+            }
+        }
+
+        run([1, 2, 3, 4, 5, 6, 7, 8]);      // var courses = [
+        //     {
+        //         id: 1,
+        //         name: "HTML, CSS",
+        //         coin: 0
+        //     },
+        //     {
+        //         id: 2,
+        //         name: "Javascript",
+        //         coin: 230
+        //     },
+        //     {
+        //         id: 3,
+        //         name: "PHP",
+        //         coin: 250
+        //     },
+        //     {
+        //         id: 4,
+        //         name: "Ruby",
+        //         coin: 300
+        //     },
+        //     {
+        //         id: 5,
+        //         name: "Ruby",
+        //         coin: 350
+        //     }
+        // ]
+        // /// forEach duyet mang in ra gia tri trong mang
+        // // courses.forEach(function (course, index) {
+        // //     console.log(index, course);
+        // // })
+        // // every dung de kiem tra dieu kien trong mang [tra ve true hoc false]
+        // var free = courses.every(function (course, index) {
+        //     return courses.coin !== 0;
+        // })
+        // console.log(free);
+        //find dung de tim kiem se chi tim kiem duoc 1
+        // var free = courses.find(function (course, index) {
+        //     // console.log(index);
+        //     return course.name === "Ruby";
+        // })
+        // console.log(free);
+        //filter dung de tim kiem nhung co the tim kiem duoc het gia tri thoa man
+        // var free = courses.filter(function (course, index) {
+        //     // console.log(index);
+        //     return course.name === "Ruby";
+        // })
+        // console.log(free);
+    </script>
+</body>
+
+</html>

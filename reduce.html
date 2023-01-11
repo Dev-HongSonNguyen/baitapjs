@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const sports = [
+            {
+                name: 'Bơi lội',
+                gold: 11
+            },
+            {
+                name: 'Boxing',
+                gold: 3
+            },
+            {
+                name: 'Đạp xe',
+                gold: 4
+            },
+            {
+                name: 'Đấu kiếm',
+                gold: 5
+            },
+        ];
+        // var sum = 0;
+        var getTotal = sports.reduce((total, numberGold)=> {
+            return total + numberGold.gold;
+        }, 0)
+        console.log(getTotal);
+        // for (var i = 0; i < sports.length; i++) {
+        //     sum += sports[i].gold;
+        // }
+        // console.log(sum);
+
+    </script>
+</body>
+
+</html>

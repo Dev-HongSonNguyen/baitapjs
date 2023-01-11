@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object prototype</title>
+</head>
+
+<body>
+    <script>
+        function User(firstName, lastName, avatar) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.avatar = avatar;
+            this.getName = function () {
+                return `${this.firstName} ${this.avatar}`
+            }
+        }
+        // thuộc tính prototype
+        User.prototype.className = "Dev";
+
+        var admin = new User('sown', 'nguyen', 'avata');
+        var client = new User('minh', 'nguyen', 'avata');
+
+        admin.role = "1";
+        client.comment = "Hay qua";
+        console.log(admin);
+        console.log(client);
+    </script>
+</body>
+
+</html>

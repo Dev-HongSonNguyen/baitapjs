@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+</head>
+
+<body>
+    <div action="">
+        <input type="text" placeholder="id" id="id"><br>
+        <input type="text" placeholder="name" id="name"><br>
+        <input type="text" placeholder="tuoi" id="tuoi"><br>
+        <input type="text" placeholder="phone" id="phone"><br>
+        <button onclick="add()">Submit</button>
+    </div>
+    <table border="1" id="show">
+        <thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>TUOI</th>
+            <th>SDT</th>
+            <th>ACTION</th>
+        </thead>
+        <thead>
+
+        </thead>
+    </table>
+    <script>
+        var data = []
+        function add() {
+            var item_id = document.getElementById("id").value
+            var item_name = document.getElementById('name').value
+            var item_tuoi = document.getElementById('tuoi').value
+            var item_phone = document.getElementById('phone').value
+        }
+        var obj = {
+            ID: item_id,
+            NAME: item_name,
+            TUOI: item_tuoi,
+            PHONE: item_phone
+        }
+        data.push(obj);
+        show();
+
+        function show() {
+            table = `<thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>TUOI</th>
+            <th>SDT</th>
+            <th>ACTION</th>
+        </thead>`
+            for (let i = 0; i < data.length; i++) {
+                table += `<tr>
+                <td>${data[i].ID}</td>
+                <td>${data[i].NAME}</td>
+                <td>${data[i].TUOI}</td>
+                <td>${data[i].PHONE}</td>
+                <td><button onclick="del()">DEL</button><button onclick="update()">UPDATE</button></td>
+                </tr>
+                `
+            }
+            document.getElementById("show").innerHTML = table
+        }
+    </script>
+</body>
+
+</html>

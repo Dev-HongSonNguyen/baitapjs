@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Contructor</title>
+</head>
+
+<body>
+    <script>
+        // 
+        function objectContructor(nameSp, priceSp, desSp) {
+            this.nameSp = nameSp;
+            this.priceSp = priceSp;
+            this.desSp = desSp;
+        }
+        var sp1 = new objectContructor("Bánh gạo", "20.000 VND", "Sản phẩm bánh gạo đến từ Việt Nam");
+        var sp2 = new objectContructor("Bánh dưa hấu", "34.000 VND", "Sản phẩm bánh dưa hấu đến từ Hàn Quốc");
+        objectContructor.prototype.sale = "50%";
+        sp1.date = "12/05/2022";
+        console.log(sp1);
+        console.log(sp2);
+    </script>
+</body>
+
+</html>

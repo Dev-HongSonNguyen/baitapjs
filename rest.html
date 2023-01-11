@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest</title>
+</head>
+
+<body>
+    <ul class="courses-list">
+
+    </ul>
+    <script>
+        var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java']
+        function render(courses) {
+            var items = document.querySelector('ul');
+            var arr = '';
+            for (var index in courses) {
+                arr += `<li>${courses[index]}</li>`;
+            }
+            items.innerHTML = arr;
+        }
+        render(courses);
+    </script>
+</body>
+
+</html>

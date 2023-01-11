@@ -1,0 +1,14 @@
+.container{
+
+}
+#slide{
+    text-align: center;
+}
+#slide img{
+    width: 200px;
+    padding: 10px;
+    display: inline-block;
+}
+.buttons{
+    text-align: center;
+}

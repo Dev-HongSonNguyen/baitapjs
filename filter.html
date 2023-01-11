@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <input type="text" id="ageCheck" value="12">
+    <button>Click</button>
+    <script>
+        const numbers = [12, 13, 14, 15, 16];
+        function click() {
+            const check = document.querySelector("button").addEventListener("click", function (number) {
+                return numbers > document.getElementById("ageCheck").value;
+            })
+            console.log(check);
+        }
+        click();
+    </script>
+</body>
+
+</html>
